@@ -20,7 +20,7 @@ spec:
         app: nginx
     spec:
       containers:
-      - image: nginx:stable-alpine
+      - image: bitnami/nginx:latest
         name: nginx
         ports:
         - containerPort: 80
