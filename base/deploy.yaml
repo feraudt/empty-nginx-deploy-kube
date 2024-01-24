@@ -19,15 +19,23 @@ spec:
       labels:
         app: nginx
     spec:
+      volumes:
+      - name: src
+        configMap:
+          name: src
       containers:
       - image: bitnami/nginx:latest
         name: nginx
         ports:
-        - containerPort: 80
+        - containerPort: 8080
+        volumeMounts:
+          - name: src
+            mountPath: /app/index.html
+            subPath: index
         resources:
           requests:
             cpu: 10m
             memory: 32Mi
           limits:
-            cpu: 10m
+            cpu: 50m
             memory: 64Mi
