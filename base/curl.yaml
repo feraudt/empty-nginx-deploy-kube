@@ -10,7 +10,7 @@ spec:
   - args:
     - /bin/sh
     - -c
-    - 'sleep 30; while true; do echo "$(curl nginx:8080)"; sleep 300; done'
+    - 'sleep 60; while true; do echo "$(curl nginx:8080)"; sleep 120; done'
     image: alpine/curl
     name: curl
     resources:
