@@ -17,5 +17,8 @@ spec:
       requests:
         cpu: 10m
         memory: 8Mi
+      limits:
+        cpu: 10m
+        memory: 64Mi
   dnsPolicy: ClusterFirst
   restartPolicy: Always
